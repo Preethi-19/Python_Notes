@@ -1,0 +1,535 @@
+FLAVOURS OF PYTHON
+
+CPython
+clang+Python
+
+JPython
+java+python
+
+IronPython
+C#, .net
+
+AnacondaPython
+large amount of data processing
+
+PYTHON VERSIONS
+1.0 1994
+2.0 2000
+3.0 2008
+3.10.1
+
+
+IDENTIFIERS
+NAME
+a=10
+
+rules:
+char
+a-z A-Z
+digits
+underscore
+
+a$=10  right
+$a=10  wrong
+
+12a=10  wrong
+a12=10  right
+
+def=10  wrong
+
+
+RESERVED KEYWORDS
+meaning and functionality--- software installation
+
+
+>>> import keyword
+>>> keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+
+
+
+DATA TYPES
+1.INT
+NUMBERS(+,-,0)
+WAYS:
+DECIMAL(0 to 9)		BINARY(0 &1)-0b/0B
+OCTAL(0 to 7)-0o/0O		HEXA-DECIMAL(0 to 15)-0x/0X
+
+id()-address, print()-value, type()-data type
+
+bin(),oct(),hex()
+
+2. FLOAT
+decimal allowed + floating point
+a=1.2356
+1.2e3
+1200.0
+
+
+3. COMPLEX 
+a=b+cj
+
+
+4.BOOLEAN
+True False
+1        0
+
+5.STRING
+sequence pof char ' '/" "/""" """
+s="abgdsdg"
+s='a'
+s="""addtrcfvcvhggh
+fgfhgbjhjhnuij
+ghjjoij,mbgh
+ghvnhkjnm"""
+
+slicing 
+left to right=== +ve
+right to left==== -ve
+
+
+6.bytes
+same values in a single entity
+a=[1,2,3,4,5,6,7,8]
+print(bytes(a))
+a[0]
+a[1]
+
+7.bytearray
+same like bytes
+
+8.list
+[]-duplicates
+heterogeous
+insertion order is preserved
+growable 
+mutable
+
+9.tuple
+same like list but immutable,()
+
+
+10.range
+sequece of no
+
+11.set
+group of elements heterogenous
+order is not preserved
+no duplicates
+growable
+mutable
+
+{}
+
+
+12.frozenset
+same like set but immutable
+frozenset()
+
+
+13.dict
+key+value{}
+key- no duplicates
+value- duplicates
+
+14.NONE
+nothing or no value
+
+a=None
+
+
+
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> $a=10
+SyntaxError: invalid syntax
+>>> a$=10
+SyntaxError: invalid syntax
+>>> a$h=10
+SyntaxError: invalid syntax
+>>> 12a=10
+SyntaxError: invalid syntax
+>>> a12=10
+>>> _a=10
+>>> __a=10
+>>> _a_=10
+>>> def=10
+SyntaxError: invalid syntax
+>>> welcome2cse=100
+>>> 2welcomecse=10
+SyntaxError: invalid syntax
+>>> a=true
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    a=true
+NameError: name 'true' is not defined
+>>> a=True
+>>> 
+>>> 
+>>> import keyword
+>>> keyword.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+>>> assert=10
+SyntaxError: invalid syntax
+>>> in=10
+SyntaxError: invalid syntax
+>>> if=12
+SyntaxError: invalid syntax
+>>> or=199
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> 
+>>> import keyword
+>>> import keyword as k
+>>> k.kwlist
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+>>> 
+>>> 
+>>> d=10
+>>> b=0b1110011
+>>> o=0o0054
+>>> x=0x1209
+>>> type(d)
+<class 'int'>
+>>> type(b)
+<class 'int'>
+>>> type(o)
+<class 'int'>
+>>> type(x)
+<class 'int'>
+>>> id(d)
+140730437366320
+>>> id(o)
+140730437367408
+>>> print(d)
+10
+>>> print(b)
+115
+>>> print(o)
+44
+>>> print(x)
+4617
+>>> c=bin(d)
+>>> print(c)
+0b1010
+>>> e=bin(x)
+>>> print(b)
+115
+>>> print(e)
+0b1001000001001
+>>> 
+>>> 
+>>> 
+>>> f=1.23345
+>>> q=1.1234567654789876
+>>> w=1.1234567789909887665433224546778900087665443
+>>> type(w)
+<class 'float'>
+>>> type(q)
+<class 'float'>
+>>> r=1.2e3
+>>> print(r)
+1200.0
+>>> f=0b11.011
+SyntaxError: invalid syntax
+>>> c=3+2i
+SyntaxError: invalid syntax
+>>> c=3+2j
+>>> c=ob011110+ob111J
+Traceback (most recent call last):
+  File "<pyshell#61>", line 1, in <module>
+    c=ob011110+ob111J
+NameError: name 'ob011110' is not defined
+>>> c=0b11011+0b11j
+SyntaxError: invalid syntax
+>>> c=0b0011+3j
+>>> c=1.1+3.099j
+>>> c.real
+1.1
+>>> c.imag
+3.099
+>>> 
+>>> 
+>>> a=True
+>>> type(a)
+<class 'bool'>
+>>> a=10
+>>> b=20
+>>> print(a<b)
+True
+>>> True
+True
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> True+True
+2
+>>> 
+>>> 
+>>> s1='sravani'
+>>> s2="sravani"
+>>> s3="""sra
+vani"""
+\
+>>> print(s1)
+sravani
+>>> print(s2)
+sravani
+>>> print(s3)
+sra
+vani
+>>> type(s1)
+<class 'str'>
+>>> type(s2)
+<class 'str'>
+>>> typr(s3)
+Traceback (most recent call last):
+  File "<pyshell#93>", line 1, in <module>
+    typr(s3)
+NameError: name 'typr' is not defined
+>>> type(s3)
+<class 'str'>
+>>> s1[0]
+'s'
+>>> s1[-5]
+'a'
+>>> s1[-7]
+'s'
+>>> len(s1)
+7
+>>> s[0:3:2]
+Traceback (most recent call last):
+  File "<pyshell#99>", line 1, in <module>
+    s[0:3:2]
+NameError: name 's' is not defined
+>>> s1[0:3:2]
+'sa'
+>>> s1*s1
+Traceback (most recent call last):
+  File "<pyshell#101>", line 1, in <module>
+    s1*s1
+TypeError: can't multiply sequence by non-int of type 'str'
+>>> s1*4
+'sravanisravanisravanisravani'
+>>> s1*97643246799
+Traceback (most recent call last):
+  File "<pyshell#103>", line 1, in <module>
+    s1*97643246799
+MemoryError
+>>> s"100
+SyntaxError: EOL while scanning string literal
+>>> s1*100
+'sravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravanisravani'
+>>> a=[1,2,3,4,5,6,7,8]
+>>> print(bytes(a))
+b'\x01\x02\x03\x04\x05\x06\x07\x08'
+>>> b=[1,1.1,2,1.2]
+>>> print(bytes(b))
+Traceback (most recent call last):
+  File "<pyshell#109>", line 1, in <module>
+    print(bytes(b))
+TypeError: 'float' object cannot be interpreted as an integer
+>>> a[0]
+1
+>>> a[5]
+6
+>>> aa[12]
+Traceback (most recent call last):
+  File "<pyshell#112>", line 1, in <module>
+    aa[12]
+NameError: name 'aa' is not defined
+>>> a[12]
+Traceback (most recent call last):
+  File "<pyshell#113>", line 1, in <module>
+    a[12]
+IndexError: list index out of range
+>>> a[5]=12
+>>> print(a)
+[1, 2, 3, 4, 5, 12, 7, 8]
+>>> b=[1,2,3,4,5,7.8]
+>>> print(bytearray(b))
+Traceback (most recent call last):
+  File "<pyshell#117>", line 1, in <module>
+    print(bytearray(b))
+TypeError: 'float' object cannot be interpreted as an integer
+>>> b=[1,2,3,4,5,7,8]
+>>>  print(bytearray(b))
+ 
+SyntaxError: unexpected indent
+>>> print(bytearray(b))
+bytearray(b'\x01\x02\x03\x04\x05\x07\x08')
+>>> b[0]
+1
+>>> b[0]=10000
+>>> print(b)
+[10000, 2, 3, 4, 5, 7, 8]
+>>> bytearray(b'\x01\x02\x03\x04\x05\x07\x08')
+bytearray(b'\x01\x02\x03\x04\x05\x07\x08')
+>>> 
+>>> 
+>>> 
+>>> x=[10,256]
+>>> print(bytearray(x))
+Traceback (most recent call last):
+  File "<pyshell#129>", line 1, in <module>
+    print(bytearray(x))
+ValueError: byte must be in range(0, 256)
+>>> 
+>>> print(bytes(b))
+Traceback (most recent call last):
+  File "<pyshell#131>", line 1, in <module>
+    print(bytes(b))
+ValueError: bytes must be in range(0, 256)
+>>> list=[10,10.5,"sravaninandhini",'sony',True,3+2j]
+>>> type(list)
+<class 'list'>
+>>> list[3]
+'sony'
+>>> list[1:3]
+[10.5, 'sravaninandhini']
+>>> list[0]=12
+>>> print(list)
+[12, 10.5, 'sravaninandhini', 'sony', True, (3+2j)]
+>>> list.append("qwe")
+>>> print(list)
+[12, 10.5, 'sravaninandhini', 'sony', True, (3+2j), 'qwe']
+>>> list.remove("qwe")
+>>> print(list)
+[12, 10.5, 'sravaninandhini', 'sony', True, (3+2j)]
+>>> list+list
+[12, 10.5, 'sravaninandhini', 'sony', True, (3+2j), 12, 10.5, 'sravaninandhini', 'sony', True, (3+2j)]
+>>> list*list
+Traceback (most recent call last):
+  File "<pyshell#144>", line 1, in <module>
+    list*list
+TypeError: can't multiply sequence by non-int of type 'list'
+>>> list*2
+[12, 10.5, 'sravaninandhini', 'sony', True, (3+2j), 12, 10.5, 'sravaninandhini', 'sony', True, (3+2j)]
+>>> t={1,2,1.2,"qwe",34)
+SyntaxError: invalid syntax
+>>>  t=(1,2,1.2,"qwe",34)
+ 
+SyntaxError: unexpected indent
+>>> t=(1,2,1.2,"qee"23)
+SyntaxError: invalid syntax
+>>> t={1,2,1.2,"qwe",23)
+SyntaxError: invalid syntax
+>>> t=(1,2,2,3,4,5)
+>>> tyrp(t)
+Traceback (most recent call last):
+  File "<pyshell#151>", line 1, in <module>
+    tyrp(t)
+NameError: name 'tyrp' is not defined
+>>> type(t)
+<class 'tuple'>
+>>> t.append("qwe")
+Traceback (most recent call last):
+  File "<pyshell#153>", line 1, in <module>
+    t.append("qwe")
+AttributeError: 'tuple' object has no attribute 'append'
+>>> t[0]
+1
+>>> t*2
+(1, 2, 2, 3, 4, 5, 1, 2, 2, 3, 4, 5)
+>>> t+t
+(1, 2, 2, 3, 4, 5, 1, 2, 2, 3, 4, 5)
+>>> t.remove(2)
+Traceback (most recent call last):
+  File "<pyshell#157>", line 1, in <module>
+    t.remove(2)
+AttributeError: 'tuple' object has no attribute 'remove'
+>>> range(0,20)
+range(0, 20)
+>>> y=range(0,20)
+>>> for i in y:print(i)
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+>>> set={1,1.2,"durgygy"}
+>>> set[0]
+Traceback (most recent call last):
+  File "<pyshell#163>", line 1, in <module>
+    set[0]
+TypeError: 'set' object is not subscriptable
+>>> set.add(29)
+>>> print(set)
+{1, 29, 'durgygy', 1.2}
+>>> set
+{1, 29, 'durgygy', 1.2}
+>>> s.remove(1)
+Traceback (most recent call last):
+  File "<pyshell#167>", line 1, in <module>
+    s.remove(1)
+NameError: name 's' is not defined
+>>> set.remove(1)
+>>> set
+{29, 'durgygy', 1.2}
+>>> set.add(12)
+>>> set
+{1.2, 12, 'durgygy', 29}
+>>> set.add(1)
+>>> set
+{1.2, 1, 12, 'durgygy', 29}
+>>> fs=frozenset(set)
+>>> fs
+frozenset({1.2, 1, 'durgygy', 12, 29})
+>>> fs.add(0)
+Traceback (most recent call last):
+  File "<pyshell#176>", line 1, in <module>
+    fs.add(0)
+AttributeError: 'frozenset' object has no attribute 'add'
+>>> fs.remove(1)
+Traceback (most recent call last):
+  File "<pyshell#177>", line 1, in <module>
+    fs.remove(1)
+AttributeError: 'frozenset' object has no attribute 'remove'
+>>> fs[2]
+Traceback (most recent call last):
+  File "<pyshell#178>", line 1, in <module>
+    fs[2]
+TypeError: 'frozenset' object is not subscriptable
+>>> 
+>>> 
+>>> 
+>>> d={1:'keshav',2:'sony',3:'sravani',4:'nandhini',5:'nandhini',5:'sravani'}
+>>> d
+{1: 'keshav', 2: 'sony', 3: 'sravani', 4: 'nandhini', 5: 'sravani'}
+>>> d={1:'keshav',2:'sony',3:'sravani',4:'nandhini',5:'nandhini',6:'sravani'}
+>>> d
+{1: 'keshav', 2: 'sony', 3: 'sravani', 4: 'nandhini', 5: 'nandhini', 6: 'sravani'}
+>>> a=None
+>>> a
+>>> a=none
+Traceback (most recent call last):
+  File "<pyshell#188>", line 1, in <module>
+    a=none
+NameError: name 'none' is not defined
+
+
+
+
+
+
+

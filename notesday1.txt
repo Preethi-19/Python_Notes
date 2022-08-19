@@ -1,0 +1,118 @@
+LANG FUND
+OPERATORS
+FLOW CONTROL
+DATE TYPES
+FUNCTIONS
+MODULES
+PACKAGES
+
+
+ADV PYTHON
+
+OOPS
+EXCEPTION HANDLINGS
+FILE
+MULTITHREADING
+DB CONNECTIVITY
+RE
+GUI
+
+
+
+
+
+LANG&PRMG CONCEPT
+ PROGRAM-INSTRUCTIONS& SEQUENCE OF EXEC
+SYNTAX RULES- PROTOCOLS
+
+PL
+1. LLPL(MACHINE UNDERSTABLE LANG)-0'S AND 1'S-1940'S- 50'S
+EX- A=64- 0011111
+2. HLPL(ENGLISH AND UNDERSTABLE BY USERS)- ENGLISH LANG- 60'S
+3. MLPL- LLPL+HLPL- 50'S - 60'S
+
+TRANSLATORS
+1.COMPILER   - TRANSLATE ML- TOTAL EXEC IT WILL SHOW ERRORS
+2. INTERPRETER- TRANSLATE ML- LINE BY LINE CHECKING ERROR
+3. ASSEMBLER- ML-OBJECT CODE REFERENCE
+
+program logic
+
+i/p -> process -> o/p
+
+i. program logic study
+ii. info gather
+iii. info process
+iv. results
+
+
+systematic methods--algo, flow charts
+
+algo--- procedure to solve problem
+
+even or odd no.--
+no/2 ---- even
+no!/2 ---- odd no
+
+step1- start
+step2- accepting the no
+step3- r=no/2
+step4- r==0 even
+step5- odd
+step6- end
+
+
+flow chart--- pic logic 
+
+raptor
+
+
+lang fund
+python is general purpose hlpl
+guido van rossum -1989
+1991
+
+C
+#include<stdio.h>
+void main()
+{
+clrscr();
+printf(":hello welcome");
+getch();
+}
+
+JAVA
+import java.util.*;
+class Hello
+{
+public static void main(String a[])
+{
+System.out.println("hello welocome");
+}
+}
+
+PYTHON
+print("hello world");
+
+BBC SHOW- " the complete mountys python circus"
+
+applications:
+
+
+features of python:
+i. simple
+ii. easy to learn
+iii, open source
+iv. freeware
+v. hlpl
+vi. platform independent
+vii. portable
+viii. dynamically typed
+ix. interpreted
+x. extensible
+xi. huge library
+
+limitations:
+app dev(X)
+performance low
+

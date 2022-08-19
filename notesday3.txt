@@ -1,0 +1,314 @@
+operators
+symbol- perform operations
+set of operators
+1. arithmetic op(+,-,*,/,%,**)
+2. relational op(>,<,>=,<=)
+3. logical op(and or not)
+4. bitwise op
+5. assignment op(+=,-=,*=)
+6. special op(in, not in, is ,is not)
+
+and--- two values true result true
+or ---- atleast one true result true
+not- true result false
+
+a	b	a and b	a or b 	a xor b
+0	0	0	0	0
+0	1	0	1	1
+1	0	0	1	1
+1 	1	1	1	0
+
+d 	not d
+0	1
+1	0
+
+
+1010	0101
+
+0101+1
+
+
+x=x+2
+x+=2
+
+Ternary op
+val if cond esle val1
+
+
+math module
+ import math
+import math as m
+from math import sqrt
+
+input()
+print()
+eval()
+
+
+
+
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> a=10
+>>> type(a)
+<class 'int'>
+>>> b=20
+>>> print(a+b)
+30
+>>> print(b-a)
+10
+>>> print(a*b)
+200
+>>> a/b
+0.5
+>>> a//b
+0
+>>> a%b
+10
+>>> a**b
+100000000000000000000
+>>> 
+>>> 
+>>> 
+>>> a=20
+>>> b=10
+>>> a>b
+True
+>>> a<b
+False
+>>> a>=b
+True
+>>> a<=b
+False
+>>> a==b
+False
+>>> a!=b
+True
+>>> 
+>>> 
+>>> a=10
+>>> b=0
+>>> a and b
+0
+>>> a or b
+10
+>>> not a
+False
+>>> 
+>>> 
+>>> 
+>>> not b
+True
+>>> 
+>>> 
+>>> 
+>>> 0 & 1
+0
+>>> a|b
+10
+>>> a^b
+10
+>>> ~a
+-11
+>>> a<<b
+10
+>>> a>>b
+10
+>>> 
+>>> 
+>>> 
+>>> x+=25
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    x+=25
+NameError: name 'x' is not defined
+>>> x=100
+>>> x+=23
+>>> x
+123
+>>> x-=23
+>>> x
+100
+>>> x*=23
+>>> x
+2300
+>>> 
+>>> 
+>>> 
+>>> a=10
+>>> b=10
+>>> a is b
+True
+>>> b=20
+>>> a is b
+False
+>>> a is not b
+True
+>>> id(a)
+140730499035696
+>>> id(b)
+140730499036016
+>>> b=10
+>>> id(b)
+140730499035696
+>>> 
+>>> 
+>>> 
+>>> 
+>>> a=[1,2,3,4,5,6,7,8,9]
+>>> 1 in a
+True
+>>> 10 in a
+False
+>>> 10 not in a
+True
+>>> 
+>>> 
+>>> 
+>>> x=1
+>>> y=1
+>>> id(x)
+140730499035408
+>>> id(y)
+140730499035408
+>>> x is y
+True
+>>> x is not y
+False
+>>> x in y
+Traceback (most recent call last):
+  File "<pyshell#82>", line 1, in <module>
+    x in y
+TypeError: argument of type 'int' is not iterable
+>>> 1 in y
+Traceback (most recent call last):
+  File "<pyshell#83>", line 1, in <module>
+    1 in y
+TypeError: argument of type 'int' is not iterable
+>>>  z=[1,2,3,4,5,6,7,8,9]
+ 
+SyntaxError: unexpected indent
+>>> z=[1,2,3,4,5,6,7,8,9]
+>>> 2 in z
+True
+\
+>>> 21 in z
+False
+>>> 
+>>> 
+>>> 
+>>> g=12
+>>> h=10
+>>> i= 1 if g>h else 0
+>>> i
+1
+>>> i= 1 if g<h else 0
+>>> i
+0
+>>> 
+>>> 
+>>> 
+>>> import math
+>>> sqrt(16)
+Traceback (most recent call last):
+  File "<pyshell#101>", line 1, in <module>
+    sqrt(16)
+NameError: name 'sqrt' is not defined
+>>> import math
+>>> math.sqrt(16)
+4.0
+>>> import math as m
+>>> m.sqrt(16)
+4.0
+>>> from math import sqrt
+>>> sqrt(16)
+4.0
+>>> from math import cell
+Traceback (most recent call last):
+  File "<pyshell#108>", line 1, in <module>
+    from math import cell
+ImportError: cannot import name 'cell' from 'math' (unknown location)
+>>> import math
+>>> cell(4.5666)
+Traceback (most recent call last):
+  File "<pyshell#110>", line 1, in <module>
+    cell(4.5666)
+NameError: name 'cell' is not defined
+>>> ceil(5.345)
+Traceback (most recent call last):
+  File "<pyshell#111>", line 1, in <module>
+    ceil(5.345)
+NameError: name 'ceil' is not defined
+>>> math.ceil(4)
+4
+>>> math.ceil(55.445)
+56
+>>> 
+>>> 
+>>> 
+>>> a=10
+>>> print(a)
+10
+>>> a=11
+>>> print(a)
+11
+
+a=int(input("enter a value"))
+a+=12
+print(a)
+
+>>> a=input("enter a value")
+enter a value12
+>>> a
+'12'
+>>> a=input("enter a value")
+enter a value178
+>>> a
+'178'
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value12
+Traceback (most recent call last):
+  File "C:/Users/Ameti preethi/add.py", line 2, in <module>
+    a+=12
+TypeError: can only concatenate str (not "int") to str
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value12
+24
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value34567
+34579
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+24
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+24
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value12
+24
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value10
+22
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+enter a value789
+801
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+24
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+24
+>>> 
+========================================================== RESTART: C:/Users/Ameti preethi/add.py ==========================================================
+22
+>>> eval("10+20+30+40")
+100
+>>> 

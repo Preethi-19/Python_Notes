@@ -1,0 +1,65 @@
+flow controls
+conditional
+if
+if cond: stmt1
+stmt2
+
+if-elif
+if cond:
+	stmt1
+else:
+	stmt2
+
+if-elif-else
+if cond:
+	stmt1
+elif cond1:
+	stmt2
+else:
+	stmt3
+
+
+n-input()
+n==0
+zero
+n==1
+one
+
+
+
+n==9
+nine
+n=10
+0to9  belongs n
+
+
+
+ITERATIVE STMTS
+for 
+while
+
+for x in sequence:
+body
+sequence---collection/string
+
+for i in range(1,11):
+    if(i==5):
+        pass
+    print(i)
+
+for i in range(1,11):
+    if(i==5):
+        continue
+    print(i)
+
+
+for i in range(1,11):
+    if(i==5):
+        break
+    print(i)
+
+
+from math import pi
+r=int(input("enter r value"))
+print("area of circle is",pi*r**2)
+

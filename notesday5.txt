@@ -1,0 +1,61 @@
+OOPS 
+OBJECT ORIENTED PRGMG LANG
+
+CLASS
+OBJECT
+INHERITANCE
+ENCAPSULATION
+POLYMORPHISM
+ABSTRACTION
+
+CLASS:
+BLUE PRINT OR PLAN OR MODEL OF THE OBJECTS
+SYNTAX: class className:
+class- keyword
+className: name of the class
+
+ex:
+class className:
+var
+methods
+
+class Welcome:
+"'welcoming the students of my session"'
+print(Welcome._doc_)
+help(Welcome)
+
+OBJECT:
+real world thing
+instance of class
+
+syntax: refvar=className()
+ex: a=Welcome()
+
+Reference Variable: var which can be used for to refer the object
+refvar access methods + properties of object
+
+
+self variable: default var which are pointing to the current obj
+
+def __int__(self):
+
+def val(self):
+
+
+
+Constructor: auto creation of obj while execution
+__int__(self)
+
+
+difference b/w   method & constructor
+method - action
+method name can be anything
+method will exec only when we call
+n no of times you can call method
+inside method there will logic of our application
+
+constructor-- auto creation of obj while execution
+name -- __int__()
+auto creation of obj while execution
+only one time exec
+inside constructor there will be only intialisation of obj

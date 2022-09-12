@@ -1,0 +1,51 @@
+TYPES OF VARIABLES:
+LOCAL(METHOD LEVEL)
+STATIC(CLASS LEVEL)
+INSTANCE(OBJECT LEVEL)
+
+a=10
+def method():
+a=10
+
+def method1():
+class Class:
+w=10
+
+class Class:
+w
+
+ACCESS VAR:
+ 
+class Test:
+
+def __init__(self):
+self.a=10
+def monitor(self):
+print(self.a)
+
+r=Test()
+r.monitor()
+print(t.a)
+
+DELETE VARIABLE
+SYNTAX: del self.varName
+
+class Test1:
+def __init__(self):
+self.a=10
+self.b=20
+
+def m1(self):
+del self.b
+
+t=Test1()
+t.m1()
+print(t.__dict__)
+
+
+GLOBAL COLLECTOR:
+isenabled()
+enabled()
+disable()
+
+

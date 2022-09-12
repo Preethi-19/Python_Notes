@@ -1,0 +1,139 @@
+INHERITANCE:
+child class acquires properties of parent class
+
+using members of one class inside another:
+composition(has-a)- var access one class-inside another class obj create
+class Engine:
+    a=10
+    def __init__(self):
+        self.b=20
+    def meth(self):
+        print("hello engine")
+class Bike:
+    def __init__(self):
+        self.engine=Engine()
+    def meth1(self):
+        print("success of engine work in bike")
+        print(self.engine.a)
+        print(self.engine.b)
+        self.engine.meth()
+r=Bike()
+r.meth1()
+    
+inheritance(is-a)- default access canbe done
+class Parent:
+    a=10
+    def __init__(self):
+        self.b=10
+    def m1(self):
+        print("parent method")
+    @classmethod
+    def m2(self):
+        print("parent class")
+    @staticmethod
+    def m3(self):
+        print("parent static")
+
+class Child(Parent):
+    pass
+
+c=Child()
+print(c.a)
+print(c.b)
+c.m1()
+c.m2()
+c.m3()
+
+main adv:code reusability
+
+TYPES OF INHERITANCE: 6
+1. single- 2 classes
+class P:
+    def m1(self):
+        print("parent method")
+        
+class C(P):
+    def m2(self):
+        print("child method")
+c=C()
+c.m1()
+c.m2()
+     
+2. multi level- 3 classes
+class P:
+    def m1(self):
+        print("parent method")
+        
+class C(P):
+    def m2(self):
+        print("child method")
+
+class SC(C):
+    def m3(self):
+        print("sub child")
+        
+c=SC()
+c.m1()
+c.m2()
+c.m3()
+    
+3. multiple
+class P:
+    def m1(self):
+        print("parent method")
+        
+class P1(P):
+    def m2(self):
+        print("parent1 method")
+
+class CC(P1):
+    def m3(self):
+        print("sub child")
+        
+c=CC()
+c.m1()
+c.m2()
+c.m3()
+    
+
+4. hierachical
+class P:
+    def m1(self):
+        print("parent method")
+        
+class C1(P):
+    def m2(self):
+        print("CHILD1 method")
+
+class C2(C1):
+    def m3(self):
+        print("sub child2 ")
+        
+c2=C2()
+c2.m1()
+c2.m2()
+c2.m3()
+c1=C1()
+c1.m1()
+c1.m2()
+
+5. hybrid
+6. cyclic
+class P(C):
+    pass
+class C(P):
+    pass
+
+MRO:
+class P():
+    pass
+class C(P):
+    pass
+class C1(C):
+    pass
+class C2(C1):
+    pass
+print(P.mro())
+print(C.mro())
+print(C1.mro())
+print(C2.mro())

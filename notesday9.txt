@@ -1,0 +1,128 @@
+EXCEPTIONS:
+
+ERROR- BUG
+2 TYPES:
+SYNTAX ERROR
+INVALID PASSING OF DATA
+RUNTIME ERROR: EXCEPTIONS
+USER I/P OR PROGRAMMING LOGIC/ MEMORY ISSUES
+
+
+EEXCEPTION HANDLING
+try except else finally
+
+try-- raise exception
+except-- handling code or altternative code
+else:
+finally: clean up
+
+
+>>> print(1/0)
+Traceback (most recent call last):
+  File "<pyshell#0>", line 1, in <module>
+    print(1/0)
+ZeroDivisionError: division by zero
+>>> 
+
+
+try :
+    print(1/0)
+
+except ZeroDivisionError as m:
+    print("exception handling as",m)
+
+
+try :
+    print(1/0)
+
+except ZeroDivisionError as m:
+    print("exception handling as",m)
+
+except ArithmeticError as a:
+    print("else exception handled as",a)
+
+else:
+    print("hello ")
+
+finally:
+    print("finally data")
+
+
+--------------------------------------------
+class ToYoungException(Exception):
+    def __init__(self,a):
+        self.msg=a
+
+class ToOldException(Exception):
+    def __init__(self,a):
+        self.msg=a
+
+age=int(input("eneter age"))
+
+if(age>18):
+    raise ToOldException("they are older in age and has voter id")
+else:
+    raise ToYoungException("they are smart")
+
+--------------------------------------------------------------------------------------------------
+FILE HANDLINGS:
+-----------------------------------------------------------------------------------------------------
+
+File:
+text file: char data
+binary file: image,videos,audios
+
+modes: r w a r+ w+ a+
+
+opening a file:
+f=open(filename, mode)
+close a file:
+f.close()
+
+read a file:
+f=open("abcdef.text",'r')
+write afile:
+f=open("abcdef.text",'w')
+append a file:
+f=open("abcdef.text",'a')
+
+readable():
+f=open("abcdef.text",'r')
+f.readable()
+f.writable()
+f.closed()
+
+f.close()
+
+writing data to text files:
+write(str)
+writelines(lines)
+
+f=open("abcdef.text",'w')
+f.write("hello hi ")
+list=["sunny","nandhini","sony"., "sravani","smitha",1,12]
+f.writelines(list)
+f.close()
+
+reading char:
+read()
+read(n)
+readline()
+readlines()
+
+f=open("ab.txt",'r')
+f.read()
+f.read(12)
+line1=f.readline()
+f.readlines()
+f.close()
+
+-----------------seek() & tell()
+seek()---- move cursor to specified location
+tell()-- current pos return cursor
+
+f.tell()
+
+f.seek(12)
+
+

@@ -1,0 +1,133 @@
+POLYMORHISM: 
+poly- many
+morphs- forms
+EX:var can be decalred in many forms
+
+-----
++ addition concatation
+* multiplication repeatation
+
+duck typing philosophy
+def f1(o):
+o.create()
+class Poly:
+    def talk(self):
+        print("data can be many forms")
+class Inher:
+    def talk(self):
+        print("acquires propertires")
+
+def f1(obj):
+    obj.talk()
+
+li=[Poly(),Inher()]
+for obj in li:
+    f1(obj)
+
+overloading
+method or operator - diff purposes
++ addition concatation
+* multiplication repeatation
+
+types:
+operator overloading
++ addition concatation
+>>> print(10+20)
+30
+>>> print("hello"+"welcome")
+hellowelcome
+>>> 
+method overloading
+class Test:
+    def w1(self):
+        print("no arg was passed")
+    def w1(self,a):
+        print("one arg was passed")
+
+t=Test()
+#t.w1(10,20)
+t.w1(10)
+t.w1(20)
+
+constructor overloading
+class Test:
+    def __init__(self):
+        print("no arg was passed")
+    def __init__(self,a):
+        print("one arg was passed")
+
+t=Test(10)
+#t.w1(10,20)
+#t.w1(10)
+#t.w1(20)
+
+
+overriding:
+method overriding:
+class P:
+    def property(self):
+        print("land+money+gold")
+    def lease(self):
+        print("friend")
+
+class C(P):
+    def lease(self):
+        print("relative")
+
+c=C()
+c.property()
+c.lease()
+c.lease()
+c.lease()
+
+Constructor overriding:
+class P:
+    def __init__(self):
+        print("land+money+gold")
+    
+
+class C(P):
+    def __init__(self):
+        print("relative")
+
+c=C()
+
+
+---------------------------------------------------------
+ABSTRACT CLASS:
+method decalation - no implementation of method
+syntax: @abstractmethod
+
+class Test:
+@abstractmethod
+def meth(self):
+pass
+
+
+from abc import *
+class Test:
+    @abstractmethod
+    def meth(self):
+        pass
+t=Test()
+t.meth()
+
+
+syntax:@abstractclass
+
+ex1:from abc import *
+
+class Test:
+    pass
+t=Test()
+
+----
+ex2:from abc import *
+
+class Test:
+    pass
+    @abstractmethod
+    def meth(self):
+        pass
+t=Test()
+t.meth()

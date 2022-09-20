@@ -1,1 +1,216 @@
 # Python_Notes
+
+MULTI-THREADING:
+
+process- a program dispatched to ready state and CPU for execution
+heavy weight
+more time 
+thread - segment of process
+light weight
+less time
+task -- execution process
+multi-tasking: simultaneously runuing multiple tasks
+2 types:
+process based
+thread based
+
+THREAD- light weight process
+
+THREADING- built-in module used for dev threads
+
+multithreading-- 
+
+******** in python program default one thread is created or contain i.e" mainthread"
+
+
+TO PRINT CURRENT EXECUTING THREAD NAME
+import threading
+print("current execting thread is " , threading.current_thread().getName())
+
+
+ways to create thread:
+a. creating thread without using any class
+
+from threading import *
+def display():
+for i in range(1,11):
+print("child thread")
+t= Thread(target=display)  # creating thread obj
+t.start() # starting of thread
+for i in rane(1,11):
+print("main thread")
+
+b. creating thread by extending thread class
+
+from threading import *
+class MyThread(Thread):
+def run(self):
+for i in range(1,11):
+print("child thread")
+t=MyThread()
+t.start()
+for i in range(1,11):
+print("main thread")
+
+
+c. creating thread eithout extending thread class
+
+from threading import *
+class Test():
+    def run(self):
+        for i in range(1,11):
+            print("child thread")
+obj=Test()
+t=Thread(target=obj.run)
+t.start()
+for i in range(1,11):
+    print("main thread")
+
+
+from threading import *
+class Test():
+    def display(self):
+        for i in range(1,11):
+            print("child thread")
+obj=Test()
+t=Thread(target=obj.display)
+t.start()
+for i in range(1,11):
+    print("main thread")
+
+
+
+SET AND GET NAME OF THREADS
+
+setName(new name)---- set our own name
+getNmae()--- returns name of thread
+
+from threading import *
+print("current execting thread is " , current_thread().getName())
+current_thread().setName("sravani")
+print("after setting name the current execting thread is " ,current_thread().getName())
+print(current_thread().name)
+
+THREAD IDENTIFICATION NO(ident)
+
+from threading import *
+    def display(self):
+            print("child thread")
+t=Thread(target=display)
+t.start()
+print("main thread",current_thread().ident)
+print("child thread",t.ident)
+
+
+methods:
+
+active_count()--- returns the no of active threads currently running
+enumerate()--- returns list of all active threads currently running
+isAlive()-- checks whether thread is exec ot not
+join()--- thread wants to wait until completing other thread 
+
+
+DAEMON THREAD:
+thread which are running in background 
+
+isDaemon()
+setDaemon()
+
+from threading import *
+def job():
+    print("child thread")
+t=Thread(target=job)
+print(t.isDaemon())
+t.setDaemon(True)
+print(t.isDaemon())
+
+
+SYNCHRONISATION: 
+muliple threads are executing simultaneously and have inconsistency problems
+solution as synchronisation---" single thread ata time"
+from threading import *
+import time
+
+def job(name):
+    for i in range(10):
+        print("child thread")
+        time.sleep(2)
+        print(name)
+t=Thread(target=job,args=("sony",))
+t1=Thread(target=job,args=("smitha",))
+t.start()
+t1.start()
+
+
+SYNCHRONISATION by lock 
+lock()
+release()
+
+from threading import *
+import time
+l=Lock()
+def job(name):
+    l.acquire()
+    for i in range(10):
+        print("child thread")
+        time.sleep(2)
+        print(name)
+    l.release()
+
+    
+t=Thread(target=job,args=("sony",))
+t1=Thread(target=job,args=("smitha",))
+t.start()
+t1.start()
+
+# only one thread is allowed to exxecute 
+
+
+
+
+SYNCHRONISATION by Rlock
+r-reentrant
+thread can acquire same lock again and again 
+owner thread available
+
+
+INTER THREAD COMMUNICATIONS:
+producer and consumer communication
+event condittion queue
+
+INTER THREAD COMMUNICATION using event:
+event obj
+e=threading.Event()
+event manages an internal flags set and clear
+
+set()- green signal
+clear()- red signal
+isSet()- checks event is set or not
+wait(sec)- wait event
+
+INTER THREAD COMMUNICATION by condition
+advanced
+cond= threading.Condition()
+acquire()
+release()
+wait(time)
+notify()
+notifyAll()
+
+INTER THREAD COMMUNICATION by queue
+
+q=queue.Queue()
+put()
+get()
+
+types()
+fifo
+lifo
+priority
+  
+
+
+
+
+
+ 
